@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.side-bar{
+  background-color: #161D2F;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 96px;
+  height: 960px;
+  padding-top: 35px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icons{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 40px;
+  margin-top: 76px;
+}
+
+.recommended , .movies{
+  display: grid;
+  grid-template-columns: 280px 280px 280px 280px;
+  row-gap: 32px;
+  column-gap: 40px;
+}
+img{
+  width: 280px;
+  height: 174px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.App{
+  background-color: #10141E;
+  position: relative;
+  padding-left: 164px;
+  min-height: 150vh;
+  padding-top: 65px;
+}
+
+.item-footer p{
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+  opacity: 0.75;
+  margin-bottom: 5px;
+}
+
+.item-footer h4{
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.item-footer{
+  margin-top: 8px;
+}
+
+.title{
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+.content-footer{
+  font-size: 24px;
+  font-weight: 500;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content-footer p{
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  opacity: 0.75;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trending-content-wrap{
+  display: flex;
+  column-gap: 40px;
+  overflow-x: scroll;
+}
+.trending-img{
+  width: 470px;
+  height: 230px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.search{
+  display: flex;
+}
+input[type = 'search']{
+  background-color:rgba(16, 20, 30, 1);
+  outline: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  border: none;
+  min-width: 400px;
+  padding-left: 30px;
 }
